@@ -68,3 +68,11 @@ console.log(persona.ciudadesVisitadas);
 //Variables con let - Funcionan igual pero el scope es diferente
 let nombre = 'Emanuel'
 
+// Operadores 
+/**
+ * Operador de asignacion:
+ */
+
+/**
+ * 
+ */
