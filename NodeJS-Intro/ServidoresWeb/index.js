@@ -27,8 +27,13 @@ app.put('/:id',()=>{
     // Respuesta aqui
 });
 
-app.delete('/:id',()=>{
-    // Respuesta aqui
+app.delete('/:id',(req,res)=>{
+    let { params:{id}} = req;
+    let userDeleted = Service.deleteUser(id);
+    res.status(202).json({
+        message:`Usuario: ${id} eliminado`,
+        body: userDeleted,
+    });
 });
 
 app.post('/',(req,res) => {

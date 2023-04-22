@@ -17,4 +17,15 @@ module.exports = {
         data.push(newUser);
         return newUser;
     },
+    deleteUser:(id)=>{
+        let deleteIndex = data.findIndex((user)=> Number(user.id) === Number(id));
+        let deletedUser = data[deleteIndex];
+        if(deleteIndex ==! 0){
+            data.splice(deleteIndex,deleteIndex);
+        }else{
+            data.shift();
+        }
+        console.log(data);
+        return deletedUser;
+    }
 }
